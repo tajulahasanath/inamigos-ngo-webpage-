@@ -1,0 +1,316 @@
+<div style="width:100%;">
+<style>
+.ia-root{
+  --paper:#FBF6EE;--paper-deep:#F3EBDA;--ink:#2A2520;--forest:#1F3D2B;--leaf:#3D6B4F;--marigold:#D9622B;--turmeric:#E8B84B;--line:#D8CBAE;--white:#FFFDF8;
+  background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden;
+}
+.ia-root h1,.ia-root h2,.ia-root h3,.ia-root h4{font-family:'Fraunces',Georgia,serif;font-weight:600;color:var(--forest);line-height:1.1;}
+.ia-root a{color:inherit;text-decoration:none;}
+.ia-wrap{max-width:1140px;margin:0 auto;padding:0 32px;}
+.ia-eyebrow{font-family:'Caveat',cursive;font-size:1.3rem;color:var(--marigold);font-weight:700;display:inline-block;}
+.ia-header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,0.95);border-bottom:1.5px solid var(--line);}
+.ia-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:1140px;margin:0 auto;}
+.ia-brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--forest);}
+.ia-nav-links{display:flex;gap:26px;font-size:0.88rem;font-weight:500;}
+.ia-nav-cta{background:var(--marigold);color:var(--white);padding:8px 16px;border-radius:3px;font-weight:600;font-size:0.82rem;white-space:nowrap;}
+.ia-hero{padding:60px 0 50px;}
+.ia-hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;}
+.ia-hero h1{font-size:2.5rem;margin:6px 0 18px;}
+.ia-hero h1 em{font-style:italic;color:var(--marigold);font-weight:500;}
+.ia-hero .lead{font-size:1rem;color:#4A453E;max-width:440px;margin-bottom:24px;}
+.ia-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.ia-btn-primary{background:var(--forest);color:var(--white);padding:12px 22px;border-radius:3px;font-weight:600;font-size:0.9rem;}
+.ia-btn-ghost{border:1.5px solid var(--forest);color:var(--forest);padding:12px 22px;border-radius:3px;font-weight:600;font-size:0.9rem;}
+.ia-seal{background:var(--white);border:1.5px dashed var(--line);border-radius:6px;padding:26px 22px;max-width:340px;margin:0 auto;}
+.ia-card-title{font-family:'Caveat',cursive;font-size:1.1rem;color:var(--leaf);font-weight:700;margin-bottom:12px;display:inline-block;}
+.ia-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.ia-stat{border-top:1.5px solid var(--line);padding-top:8px;}
+.ia-stat .num{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;color:var(--marigold);display:block;}
+.ia-stat .label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--leaf);font-weight:600;}
+.ia-divider{width:100%;height:1.5px;background:repeating-linear-gradient(90deg,var(--line) 0 10px,transparent 10px 18px);margin:0 32px;}
+.ia-section{padding:50px 0;}
+.ia-about{background:var(--paper-deep);}
+.ia-section-head{max-width:560px;margin-bottom:30px;}
+.ia-section-head h2{font-size:1.7rem;margin-top:4px;}
+.ia-section-head p{color:#4A453E;font-size:0.94rem;margin-top:10px;}
+.ia-about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:36px;align-items:flex-start;}
+.ia-about-card{background:var(--white);border-radius:8px;padding:22px;border:1px solid var(--line);}
+.ia-about-card h3{font-size:1rem;margin-bottom:10px;}
+.ia-about-card ul{list-style:none;font-size:0.85rem;color:#4A453E;padding:0;}
+.ia-about-card li{padding:6px 0;border-bottom:1px dashed var(--line);}
+.ia-about-card li:last-child{border-bottom:none;}
+.ia-about-body p{color:#4A453E;margin-bottom:14px;font-size:0.92rem;}
+.ia-about-body strong{color:var(--forest);}
+.ia-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.ia-badge{font-size:0.7rem;font-weight:600;color:var(--leaf);background:rgba(61,107,79,0.08);border:1px solid rgba(61,107,79,0.25);padding:5px 10px;border-radius:20px;}
+.ia-issues{background:var(--forest);color:var(--paper);padding:36px 0;}
+.ia-issues-wrap{display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:space-between;}
+.ia-issues h3{color:var(--turmeric);font-size:1.2rem;max-width:220px;}
+.ia-issue-list{display:flex;flex-wrap:wrap;gap:10px;flex:1;}
+.ia-issue-pill{border:1px solid rgba(251,246,238,0.3);padding:7px 13px;border-radius:20px;font-size:0.78rem;}
+.ia-project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.ia-project-card{background:var(--white);border:1.5px solid var(--line);border-radius:6px;padding:22px 18px 18px;position:relative;}
+.ia-project-card .ia-tag{position:absolute;top:-11px;left:18px;background:var(--marigold);color:var(--white);font-size:0.64rem;font-weight:700;letter-spacing:0.03em;padding:3px 8px;border-radius:3px;text-transform:uppercase;}
+.ia-project-card .ia-icon{width:38px;height:38px;margin-bottom:12px;}
+.ia-project-card h3{font-size:1.05rem;margin-bottom:6px;}
+.ia-project-card .ia-hindi{font-family:'Caveat',cursive;color:var(--leaf);font-size:0.95rem;font-weight:700;margin-left:4px;}
+.ia-project-card p{color:#4A453E;font-size:0.82rem;}
+.ia-impact{background:linear-gradient(135deg,var(--turmeric),#f0cd7a);}
+.ia-impact-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;}
+.ia-impact-grid .ia-cell{padding:6px 14px;border-right:1.5px dashed rgba(31,61,43,0.3);}
+.ia-impact-grid .ia-cell:last-child{border-right:none;}
+.ia-impact-grid .ia-num{font-family:'Fraunces',serif;font-size:2rem;font-weight:700;color:var(--forest);display:block;}
+.ia-impact-grid .ia-label{font-size:0.7rem;font-weight:600;color:#4A3A12;text-transform:uppercase;margin-top:2px;}
+.ia-gallery{background:var(--paper-deep);}
+.ia-gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:110px;gap:10px;}
+.ia-g-item{border-radius:6px;overflow:hidden;position:relative;display:flex;align-items:flex-end;padding:10px;color:var(--white);font-weight:600;font-size:0.72rem;}
+.ia-g-item:nth-child(1){grid-row:span 2;}
+.ia-g-item:nth-child(4){grid-row:span 2;}
+.ia-g-item span{position:relative;z-index:2;}
+.ia-quote{padding:46px 0;text-align:center;}
+.ia-quote blockquote{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:1.2rem;color:var(--forest);max-width:680px;margin:0 auto 12px;}
+.ia-quote cite{font-size:0.82rem;color:var(--leaf);font-weight:600;font-style:normal;}
+.ia-cta{background:var(--forest);color:var(--paper);}
+.ia-cta-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:34px;align-items:center;}
+.ia-cta h2{color:var(--white);font-size:1.7rem;}
+.ia-cta p{color:rgba(251,246,238,0.8);font-size:0.92rem;margin:12px 0 20px;max-width:420px;}
+.ia-cta-buttons{display:flex;gap:12px;flex-wrap:wrap;}
+.ia-btn-light{background:var(--turmeric);color:var(--forest);padding:12px 22px;border-radius:3px;font-weight:700;font-size:0.88rem;}
+.ia-btn-outline-light{border:1.5px solid rgba(251,246,238,0.5);color:var(--paper);padding:12px 22px;border-radius:3px;font-weight:600;font-size:0.88rem;}
+.ia-ways-card{background:rgba(251,246,238,0.06);border:1px solid rgba(251,246,238,0.18);border-radius:8px;padding:20px;}
+.ia-ways-card h4{color:var(--turmeric);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:12px;}
+.ia-ways-item{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid rgba(251,246,238,0.12);font-size:0.82rem;color:rgba(251,246,238,0.9);}
+.ia-ways-item:last-child{border-bottom:none;}
+.ia-dot{width:7px;height:7px;border-radius:50%;background:var(--marigold);margin-top:5px;flex-shrink:0;}
+.ia-footer{background:#17291D;color:rgba(251,246,238,0.75);padding:36px 0 20px;font-size:0.8rem;}
+.ia-footer-grid{display:grid;grid-template-columns:1.3fr 0.9fr 0.9fr 1fr;gap:26px;margin-bottom:26px;}
+.ia-footer-grid h4{color:var(--paper);font-size:0.85rem;margin-bottom:10px;font-weight:600;}
+.ia-footer-grid p,.ia-footer-grid a{color:rgba(251,246,238,0.65);display:block;margin-bottom:6px;line-height:1.45;}
+.ia-footer-brand{display:flex;align-items:center;gap:8px;font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--paper);margin-bottom:10px;}
+.ia-footer-bottom{border-top:1px solid rgba(251,246,238,0.12);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:0.74rem;color:rgba(251,246,238,0.5);}
+@media (max-width:700px){
+  .ia-nav-links{display:none;}
+  .ia-hero-grid,.ia-about-grid,.ia-cta-grid{grid-template-columns:1fr;}
+  .ia-project-grid,.ia-impact-grid,.ia-gallery-grid,.ia-footer-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+
+<div class="ia-root">
+  <div class="ia-header">
+    <div class="ia-nav">
+      <div class="ia-brand">
+        <svg width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#3D6B4F"/><path d="M24 13C19 13 15 17 15 21C15 27 24 35 24 35C24 35 33 27 33 21C33 17 29 13 24 13Z" fill="#E8B84B"/><circle cx="24" cy="21" r="4" fill="#1F3D2B"/></svg>
+        InAmigos Foundation
+      </div>
+      <div class="ia-nav-links">
+        <a href="#">About</a><a href="#">Projects</a><a href="#">Impact</a><a href="#">Get Involved</a>
+      </div>
+      <a class="ia-nav-cta" href="#">Become a Volunteer</a>
+    </div>
+  </div>
+
+  <section class="ia-hero">
+    <div class="ia-wrap ia-hero-grid">
+      <div>
+        <span class="ia-eyebrow">Bilaspur, Chhattisgarh — since 2020</span>
+        <h1>Small acts of <em>kindness</em>, carried across 28 states.</h1>
+        <p class="lead">InAmigos Foundation is a Section 8 registered non-profit working at the ground level on education, food security, women's empowerment, animal welfare, environment, and skill-building.</p>
+        <div class="ia-actions">
+          <a class="ia-btn-primary" href="#">Join the Movement</a>
+          <a class="ia-btn-ghost" href="#">See Our Work</a>
+        </div>
+      </div>
+      <div class="ia-seal">
+        <span class="ia-card-title">— from the field register</span>
+        <div class="ia-stats">
+          <div class="ia-stat"><span class="num">50K+</span><span class="label">Lives Touched</span></div>
+          <div class="ia-stat"><span class="num">28</span><span class="label">States Reached</span></div>
+          <div class="ia-stat"><span class="num">200+</span><span class="label">Volunteers</span></div>
+          <div class="ia-stat"><span class="num">6</span><span class="label">Active Projects</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ia-divider"></div>
+
+  <section class="ia-section ia-about">
+    <div class="ia-wrap">
+      <div class="ia-section-head">
+        <span class="ia-eyebrow">Who we are</span>
+        <h2>Built on the ground, not just on paper.</h2>
+      </div>
+      <div class="ia-about-grid">
+        <div class="ia-about-card">
+          <h3>At a glance</h3>
+          <ul>
+            <li><strong>Founded:</strong> 23 Sept 2020</li>
+            <li><strong>Founder:</strong> Mr. Govind Shukla</li>
+            <li><strong>Structure:</strong> Section 8 Non-Profit</li>
+            <li><strong>Base:</strong> Bilaspur, Chhattisgarh</li>
+            <li><strong>Reach:</strong> 28 states</li>
+          </ul>
+        </div>
+        <div class="ia-about-body">
+          <p>In a world that often feels divided, <strong>InAmigos Foundation</strong> works toward unity and dignity for every community it touches. What began as a small, local effort in Chhattisgarh has grown into a network of volunteers running programmes across education, nutrition, women's livelihoods, animal welfare, environmental care, and youth skilling.</p>
+          <p>We don't chase scale for its own sake — every initiative closes a specific gap. <strong>That's the InAmigos way</strong> — programmatic, local, and accountable.</p>
+          <div class="ia-badges">
+            <span class="ia-badge">80G &amp; 12A Certified</span>
+            <span class="ia-badge">CSR-1 Registered</span>
+            <span class="ia-badge">NITI Aayog Listed</span>
+            <span class="ia-badge">ISO 9001:2015</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ia-issues">
+    <div class="ia-wrap ia-issues-wrap">
+      <h3>The gaps we keep showing up for.</h3>
+      <div class="ia-issue-list">
+        <span class="ia-issue-pill">Education denied by poverty</span>
+        <span class="ia-issue-pill">Shrinking green cover</span>
+        <span class="ia-issue-pill">Limited women's livelihoods</span>
+        <span class="ia-issue-pill">Street animals without care</span>
+        <span class="ia-issue-pill">Families without daily meals</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ia-section ia-projects">
+    <div class="ia-wrap">
+      <div class="ia-section-head">
+        <span class="ia-eyebrow">Where the work happens</span>
+        <h2>Six projects. One mission.</h2>
+      </div>
+      <div class="ia-project-grid">
+        <div class="ia-project-card">
+          <span class="ia-tag">Nutrition</span>
+          <svg class="ia-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#FCE9DC"/><path d="M16 20C16 16 19 13 24 13C29 13 32 16 32 20V30C32 33 29 35 24 35C19 35 16 33 16 30V20Z" stroke="#D9622B" stroke-width="2"/></svg>
+          <h3>Sewa <span class="ia-hindi">सेवा</span></h3>
+          <p>Food and clothing for underprivileged families.</p>
+        </div>
+        <div class="ia-project-card">
+          <span class="ia-tag">Education</span>
+          <svg class="ia-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#E6EFE9"/><path d="M24 14L36 20L24 26L12 20L24 14Z" stroke="#3D6B4F" stroke-width="2" stroke-linejoin="round"/></svg>
+          <h3>Bachpanshala <span class="ia-hindi">बचपनशाला</span></h3>
+          <p>Joyful learning for underprivileged children.</p>
+        </div>
+        <div class="ia-project-card">
+          <span class="ia-tag">Empowerment</span>
+          <svg class="ia-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#FCF1DA"/><path d="M24 30C28 30 31 27 31 22C31 17 28 14 24 14C20 14 17 17 17 22C17 27 20 30 24 30Z" stroke="#C9941F" stroke-width="2"/></svg>
+          <h3>Udaan <span class="ia-hindi">उड़ान</span></h3>
+          <p>Skills and resources for women's independence.</p>
+        </div>
+        <div class="ia-project-card">
+          <span class="ia-tag">Animal Welfare</span>
+          <svg class="ia-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#EAE2F4"/><circle cx="24" cy="26" r="8" stroke="#7A5FA8" stroke-width="2"/></svg>
+          <h3>Jeev <span class="ia-hindi">जीव</span></h3>
+          <p>Rescue and care for street and injured animals.</p>
+        </div>
+        <div class="ia-project-card">
+          <span class="ia-tag">Environment</span>
+          <svg class="ia-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#E1EFE3"/><path d="M24 34V20" stroke="#2F7D45" stroke-width="2"/></svg>
+          <h3>Prakriti <span class="ia-hindi">प्रकृति</span></h3>
+          <p>Tree plantations to restore green cover.</p>
+        </div>
+        <div class="ia-project-card">
+          <span class="ia-tag">Skilling</span>
+          <svg class="ia-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#FBE6E6"/><rect x="14" y="20" width="20" height="14" rx="2" stroke="#C1503F" stroke-width="2"/></svg>
+          <h3>Vikas <span class="ia-hindi">विकास</span></h3>
+          <p>Internships building skills for 30,000+ youth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ia-impact">
+    <div class="ia-wrap">
+      <div class="ia-impact-grid">
+        <div class="ia-cell"><span class="ia-num">50,000+</span><span class="ia-label">Beneficiaries</span></div>
+        <div class="ia-cell"><span class="ia-num">28</span><span class="ia-label">States Active</span></div>
+        <div class="ia-cell"><span class="ia-num">200+</span><span class="ia-label">Volunteers</span></div>
+        <div class="ia-cell"><span class="ia-num">6</span><span class="ia-label">Flagship Projects</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ia-section ia-gallery">
+    <div class="ia-wrap">
+      <div class="ia-section-head">
+        <span class="ia-eyebrow">Snapshots from the field</span>
+        <h2>What our impact looks like.</h2>
+      </div>
+      <div class="ia-gallery-grid">
+        <div class="ia-g-item" style="background:linear-gradient(160deg,#D9622B,#a8451d);"><span>Food &amp; clothing drives</span></div>
+        <div class="ia-g-item" style="background:linear-gradient(160deg,#3D6B4F,#244633);"><span>Classrooms for children</span></div>
+        <div class="ia-g-item" style="background:linear-gradient(160deg,#E8B84B,#c19a32);"><span>Skill workshops for women</span></div>
+        <div class="ia-g-item" style="background:linear-gradient(160deg,#7A5FA8,#564178);"><span>Animal rescue &amp; care</span></div>
+        <div class="ia-g-item" style="background:linear-gradient(160deg,#2F7D45,#1d5a30);"><span>Tree plantation drives</span></div>
+        <div class="ia-g-item" style="background:linear-gradient(160deg,#C1503F,#8f392b);"><span>Vikas internships</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ia-quote">
+    <div class="ia-wrap">
+      <blockquote>"A charity should focus on children, animals, women, and the environment — because lasting change always starts with those who need it most."</blockquote>
+      <cite>— Govind Shukla, Founder &amp; CEO, InAmigos Foundation</cite>
+    </div>
+  </section>
+
+  <section class="ia-section ia-cta">
+    <div class="ia-wrap ia-cta-grid">
+      <div>
+        <span class="ia-eyebrow" style="color:#E8B84B;">Be the change</span>
+        <h2>Your time, skill, or support can move someone's life forward today.</h2>
+        <p>Whether you have an afternoon a week or a one-time contribution to give, there's a place for you in this work.</p>
+        <div class="ia-cta-buttons">
+          <a class="ia-btn-light" href="#">Join Us</a>
+          <a class="ia-btn-outline-light" href="#">Donate Now</a>
+        </div>
+      </div>
+      <div class="ia-ways-card">
+        <h4>Ways to get involved</h4>
+        <div class="ia-ways-item"><span class="ia-dot"></span> Volunteer at a local drive near you</div>
+        <div class="ia-ways-item"><span class="ia-dot"></span> Apply for an internship under Project Vikas</div>
+        <div class="ia-ways-item"><span class="ia-dot"></span> Donate ₹200+ — tax-deductible under 80G</div>
+        <div class="ia-ways-item"><span class="ia-dot"></span> Spread the word using #InAmigos</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ia-footer">
+    <div class="ia-wrap">
+      <div class="ia-footer-grid">
+        <div>
+          <div class="ia-footer-brand">
+            <svg width="22" height="22" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#3D6B4F"/><path d="M24 13C19 13 15 17 15 21C15 27 24 35 24 35C24 35 33 27 33 21C33 17 29 13 24 13Z" fill="#E8B84B"/></svg>
+            InAmigos Foundation
+          </div>
+          <p>A Section 8 non-profit working across 28 states on education, food security, women's empowerment, animal welfare, environment, and skilling.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="#">About Us</a><a href="#">Our Projects</a><a href="#">Our Impact</a><a href="#">Get Involved</a>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Official Website</a>
+        </div>
+        <div>
+          <h4>Reach Us</h4>
+          <p>Bilaspur, Chhattisgarh – 495555</p>
+          <p>support@inamigosfoundation.org.in</p>
+          <p>+91 626 730 9902</p>
+        </div>
+      </div>
+      <div class="ia-footer-bottom">
+        <span>© 2026 InAmigos Foundation. All rights reserved.</span>
+        <span>Made with care for a more compassionate India</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
